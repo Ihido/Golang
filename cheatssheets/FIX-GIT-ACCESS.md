@@ -57,3 +57,19 @@ git remote remove origin
 git remote add origin *ссылка на репозиторий*
 git push -u origin main
 ```
+
+**Добавление**
+# 1. Проверить статус (ты это уже сделал)
+git status
+
+# 2. Добавить изменения
+git add .
+
+# 3. Проверить статус еще раз (должны быть зеленые M)
+git status
+
+# 4. Закоммитить
+git commit -m "Обновил документацию"
+
+# 5. Запушить
+git push origin main
