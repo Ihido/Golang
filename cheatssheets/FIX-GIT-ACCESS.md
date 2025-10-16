@@ -65,7 +65,7 @@ git push -u origin main
 git status
 ```
 
-- 2. Добавить изменения
+- Добавить изменения
 ```bash
 git add .
 ```
