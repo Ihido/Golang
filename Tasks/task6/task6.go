@@ -1,0 +1,34 @@
+package main
+
+import "fmt"
+
+// func main() {
+// 	var n int
+// 	n = 7
+// 	for i := 1; i <= n; i++ {
+// 		fmt.Print(i, " ")
+// 	}
+// }
+
+// func main() {
+
+// 	for i := 10; i >= 1; i-- {
+// 		fmt.Print(i, " ")
+// 	}
+// }
+
+// func main() {
+// 	for i := 2; i <= 10; i++ {
+// 		if i%2 == 0 {
+// 			fmt.Print(i, " ")
+// 		}
+// 	}
+// }
+
+func main() {
+	n := 0
+	for i := 1; i <= 5; i++ {
+		n = n + i
+	}
+	fmt.Print(n)
+}
