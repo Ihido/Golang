@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//-----------------------------------------------------1
+
 /*func main() {
 	var rub float64
 	fmt.Println("Введите сумму в рублях: ")
@@ -14,6 +16,8 @@ import "fmt"
 	var eur = rub / 101.2
 	fmt.Printf("%.0f рублей = %.2f долларов, %2.f евро\n", rub, usd, eur)
 }*/
+
+//-----------------------------------------------------2
 
 /*func main() {
 	var kg, m float64
@@ -45,6 +49,8 @@ import "fmt"
 
 	fmt.Printf("Ваш ИМТ: %.1f (%s)\n", imt, category)
 }*/
+
+//-----------------------------------------------------3
 
 func main() {
 	var sum float64
