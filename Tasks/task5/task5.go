@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // func main() {
 // 	var name, city string
@@ -16,10 +18,16 @@ import "fmt"
 
 func main() {
 	var word string
-	var num int
+	var count int
 	fmt.Println("Введите слово: ")
 	fmt.Scanln(&word)
-	fmt.Println("Введите число: ")
-	fmt.Scanln(&num)
+	fmt.Println("Введите количество повторений: ")
+	fmt.Scanln(&count)
+	enter := ""
+	for i := 0; i < count; i++ {
+		enter += word
+	}
+
+	fmt.Println(enter)
 
 }
