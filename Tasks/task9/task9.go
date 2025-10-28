@@ -69,25 +69,48 @@ import "fmt"
 
 //-----------------------------------------------------2.2
 
-func SumDigits(number int) int {
-	sum := 0 // Создали флажок для записи чисел
+// func SumDigits(number int) int {
+// 	sum := 0 // Создали флажок для записи чисел
 
-	for number > 0 {
-		digit := number % 10 // Отбираем последнюю цифру (123 = 12 % 10 = 3)
-		sum += digit         // Записываем последнее число в переменную
-		number = number / 10 // Цикл продолжается со следующей цифры 12
+// 	for number > 0 {
+// 		digit := number % 10 // Отбираем последнюю цифру (123 = 12 % 10 = 3)
+// 		sum += digit         // Записываем последнее число в переменную
+// 		number = number / 10 // Цикл продолжается со следующей цифры 12
+// 	}
+
+// 	return sum
+// }
+
+// func main() {
+// 	result1 := SumDigits(123)
+// 	fmt.Println(result1) // 6
+
+// 	result2 := SumDigits(987)
+// 	fmt.Println(result2) // 24 (9+8+7)
+
+// 	result3 := SumDigits(1000)
+// 	fmt.Println(result3) // 1
+// }
+
+func IsPrime(number int) bool {
+	// Числа меньше 2 - не простые
+	if number < 2 {
+		return false
 	}
 
-	return sum
+	// Проверяем делители от 2 до корня из number
+	for i := 2; i*i <= number; i++ {
+		if number%i == 0 {
+			return false // нашли делитель - не простое
+		}
+	}
+
+	return true // делителей не найдено - простое
 }
-
 func main() {
-	result1 := SumDigits(123)
-	fmt.Println(result1) // 6
+	message1 := IsPrime(7)
+	fmt.Println(message1)
 
-	result2 := SumDigits(987)
-	fmt.Println(result2) // 24 (9+8+7)
-
-	result3 := SumDigits(1000)
-	fmt.Println(result3) // 1
+	message2 := IsPrime(8)
+	fmt.Println(message2)
 }
