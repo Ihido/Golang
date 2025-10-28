@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 //-----------------------------------------------------1.1
 
@@ -46,25 +44,50 @@ import (
 
 //-----------------------------------------------------2.1
 
-// Задачка далась не сразу. Для решения необходимо разбить по этапам.
+// Задачка далась не сра зу. Для решения необходимо разбить по этапам.
 // 1. Определиться с типом возвращаемого значения: в данном случае bool
 // 2. Каким образом мы будем проверять длину строки? спомощью встроенной фнкуции len
 // 3. Как мы будем проверять строку на наличие цифр? Спомощью цикла фор, предварительно создав "флажок number", который будет говорить "Есть ли цифра?"
-func ValidPassword(password string) bool {
-	if len(password) < 8 {
-		return false
+// func ValidPassword(password string) bool {
+// 	if len(password) < 8 {
+// 		return false
+// 	}
+// 	number := false
+// 	for i := 0; i < len(password); i++ {
+// 		if password[i] >= '0' && password[i] <= '9' {
+// 			number = true
+// 			break
+// 		}
+// 	}
+// 	return number
+// }
+
+// func main() {
+// 	result := ValidPassword("Grinf8")
+// 	fmt.Print(result)
+// }
+
+//-----------------------------------------------------2.2
+
+func SumDigits(number int) int {
+	sum := 0
+
+	for number > 0 {
+		digit := number % 10
+		sum += digit
+		number = number / 10
 	}
-	number := false
-	for i := 0; i < len(password); i++ {
-		if password[i] >= '0' && password[i] <= '9' {
-			number = true
-			break
-		}
-	}
-	return number
+
+	return sum
 }
 
 func main() {
-	result := ValidPassword("Grinf8")
-	fmt.Print(result)
+	result1 := SumDigits(123)
+	fmt.Println(result1) // 6
+
+	result2 := SumDigits(987)
+	fmt.Println(result2) // 24 (9+8+7)
+
+	result3 := SumDigits(1000)
+	fmt.Println(result3) // 1
 }
