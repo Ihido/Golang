@@ -70,12 +70,12 @@ import "fmt"
 //-----------------------------------------------------2.2
 
 func SumDigits(number int) int {
-	sum := 0
+	sum := 0 // Создали флажок для записи чисел
 
 	for number > 0 {
-		digit := number % 10
-		sum += digit
-		number = number / 10
+		digit := number % 10 // Отбираем последнюю цифру (123 = 12 % 10 = 3)
+		sum += digit         // Записываем последнее число в переменную
+		number = number / 10 // Цикл продолжается со следующей цифры 12
 	}
 
 	return sum
