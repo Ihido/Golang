@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+	"unicode/utf8"
+)
+
 //-----------------------------------------------------1.1
 
 // func Square(num int) int {
@@ -131,6 +137,19 @@ package main
 
 //-----------------------------------------------------2.5
 
-func TextStats(word, symbol string) int {
+func TextStats(text string) (int, int) {
+	charCount := utf8.RuneCountInString(text)
 
+	words := strings.Fields(text)
+	warCount := len(words)
+
+	return warCount, charCount
+}
+
+func main() {
+	words, chars := TextStats("Salut world")
+	fmt.Printf("%d слова, %d символов\n", words, chars)
+
+	words2, chars2 := TextStats("Привет мир кекВ!")
+	fmt.Printf("Слова: %d"+" "+"Символов: %d", words2, chars2)
 }
