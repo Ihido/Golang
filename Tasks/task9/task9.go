@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //-----------------------------------------------------1.1
 
 // func Square(num int) int {
@@ -92,25 +90,47 @@ import "fmt"
 // 	fmt.Println(result3) // 1
 // }
 
-func IsPrime(number int) bool {
-	// Числа меньше 2 - не простые
-	if number < 2 {
-		return false
-	}
+//-----------------------------------------------------2.3
 
-	// Проверяем делители от 2 до корня из number
-	for i := 2; i*i <= number; i++ {
-		if number%i == 0 {
-			return false // нашли делитель - не простое
-		}
-	}
+// func IsPrime(number int) bool {
+// 	if number < 2 {
+// 		return false
+// 	}
 
-	return true // делителей не найдено - простое
-}
-func main() {
-	message1 := IsPrime(7)
-	fmt.Println(message1)
+// 	for i := 2; i*i == number; i++ {
+// 		if number%i == 0 {
+// 			return false
+// 		}
 
-	message2 := IsPrime(8)
-	fmt.Println(message2)
+// 	}
+// 	return true
+// }
+// func main() {
+// 	message1 := IsPrime(7)
+// 	fmt.Println(message1)
+
+// 	message2 := IsPrime(8)
+// 	fmt.Println(message2)
+// }
+
+//-----------------------------------------------------2.4
+
+// func GenerateEmail(name, domain string) string { //нельзя использовать print, так как результат будет false(потому что сравнивает пустую строку email с name+domain)
+// 	email := name + "@" + domain
+// 	return email
+// }
+
+// func main() {
+// 	message1 := GenerateEmail("Иван", "mail.ru")
+// 	message2 := GenerateEmail("Дмитрий", "yandex.ru")
+// 	message3 := GenerateEmail("Олег", "gmail.com")
+// 	fmt.Println(message1)
+// 	fmt.Println(message2)
+// 	fmt.Println(message3)
+// }
+
+//-----------------------------------------------------2.5
+
+func TextStats(word, symbol string) int {
+
 }
